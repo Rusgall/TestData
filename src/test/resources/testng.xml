@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="data">
+
+    <test name="TestData">
+        <parameter name="typeDB" value="${typeDB}"/>
+        <parameter name="host" value="${host}"/>
+        <parameter name="user" value="${user}"/>
+        <parameter name="pass" value="${pass}"/>
+
+        <classes>
+            <class name="ru.idigital.fastgate.qa.tests.Connection"/>
+            <class name="ru.idigital.fastgate.qa.tests.OutboundChannel"/>
+            <class name="ru.idigital.fastgate.qa.tests.SenderName"/>
+            <class name="ru.idigital.fastgate.qa.tests.Role"/>
+            <class name="ru.idigital.fastgate.qa.tests.Templates"/>
+            <class name="ru.idigital.fastgate.qa.tests.ReplacementRules"/>
+            <class name="ru.idigital.fastgate.qa.tests.Blocks"/>
+            <class name="ru.idigital.fastgate.qa.tests.Messages"/>
+        </classes>
+    </test>
+
+</suite>
