@@ -41,13 +41,13 @@ public class SqlDataPG extends SqlDataImpl implements SqlData {
     public String getInsertGrants() {
         return "insert into role_grants " +
                 "(id, grant_name, filter, role_id) " +
-                "values ((select max(id)+1 from role_grants), ?, '{}', ?)";
+                "values (nextval('role_grants_seq'), ?, '{}', ?)";
     }
 
     @Override
     public String getInsertRole() {
         return "insert into user_role " +
                 "(id, name, description, data, admin, deleted, owner_id, dep_id) values " +
-                "((select max(id)+1 from user_role), ?, ?, '', ?, ?, ?, ?)";
+                "(nextval('user_role_seq'), ?, ?, '', ?, ?, ?, ?)";
     }
 }

@@ -10,4 +10,6 @@ public class Constants {
     public static final String TEST_SENDER = "testSender";
     public static final String TEST_CONNECTION = "testConnection";
     public static final String TEST_DISTRIB_TEMPLATE = "testDistribTemplate";
+    public static final String TEST_DISTRIB_TEMPLATE_NOT_USE = "testDistribTemplateNotUse";
+    public static final String TEST_DISTRIB = "testDistribution";
 }

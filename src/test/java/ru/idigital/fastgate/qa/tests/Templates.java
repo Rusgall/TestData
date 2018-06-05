@@ -11,7 +11,12 @@ public class Templates extends BaseTestData {
 
     @Test(description = "Шаблоны рассылок")
     public void insertDistribTemplates() {
-        TemplatesFarm.prepareTemplate(Constants.TEST_DISTRIB_TEMPLATE)
+//        TemplatesFarm.prepareTemplate(Constants.TEST_DISTRIB_TEMPLATE)
+//                .withChannel(Constants.DEFAULT_CHANNEL).withShortNumber(getSenderNumber(Constants.TEST_SENDER))
+//                .withDays(Byte.valueOf("127")).withDuration(1).withResendTimeout(60)
+//                .withType(TemplateType.Distribution).withTemplateVariant(LanguageCode.Rus, "Текст").make();
+
+        TemplatesFarm.prepareTemplate(Constants.TEST_DISTRIB_TEMPLATE_NOT_USE)
                 .withChannel(Constants.DEFAULT_CHANNEL).withShortNumber(getSenderNumber(Constants.TEST_SENDER))
                 .withDays(Byte.valueOf("127")).withDuration(1).withResendTimeout(60)
                 .withType(TemplateType.Distribution).withTemplateVariant(LanguageCode.Rus, "Текст").make();

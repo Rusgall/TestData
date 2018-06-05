@@ -1,4 +1,6 @@
 /.allure
 /.idea
 /target
+/logs.base.dir_IS_UNDEFINED
 TestData.iml
+qa-fastgate-data.iml

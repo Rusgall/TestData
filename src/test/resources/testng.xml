@@ -17,6 +17,7 @@
             <class name="ru.idigital.fastgate.qa.tests.ReplacementRules"/>
             <class name="ru.idigital.fastgate.qa.tests.Blocks"/>
             <class name="ru.idigital.fastgate.qa.tests.Messages"/>
+            <class name="ru.idigital.fastgate.qa.tests.Distributions"/>
         </classes>
     </test>
 
