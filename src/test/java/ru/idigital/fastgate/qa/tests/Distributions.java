@@ -14,7 +14,7 @@ import java.text.ParseException;
 
 public class Distributions extends BaseTestData {
 
-    @Test(description = "Рассылки")
+//    @Test(description = "Рассылки")
     public void insertDistributions() throws ParseException {
         Template template = getTemplateByName(Constants.TEST_DISTRIB_TEMPLATE);
         OutboundChannel outboundChannel = template.getOutboundChannel();
@@ -26,4 +26,40 @@ public class Distributions extends BaseTestData {
                 .withOwnerId(1).withStartHour((byte) 0).withStopHour((byte) 24).withDeliveryDays(template.getDeliveryDays())
                 .withType(0).withResendTimeout(60).withContentTypes("0").withMessage(message).make();
     }
+
+    @Test(description = "Постоянные Рассылки")
+    public void insertPermanentDistributions() throws ParseException {
+        OutboundChannel outboundChannel = getOutboundChannelByName(Constants.DEFAULT_CHANNEL);
+        String message = "{\"PUSH\": {\"text\": \"{text}\"}, \"VIBER\": {\"text\": \"{text}\"}, \"SMS\": {\"text\": \"{text}\"}, \"VK\": {\"text\": \"{text}\"}}";
+        DistributionFarm.prepareDistribution(Constants.TEST_PERMANENT_DISTRIB)
+                .withOutboundChannel(outboundChannel).withPriority(Priority.MEDIUM)
+                .withLimitSpeed(true).withMessagesReady(false).withSpeedPeroid(SpeedPeriodEnum.MIN)
+                .withDeliveryProbability(0).withSendSpeed(1000).withState(DistributionState.CREATED)
+                .withOwnerId(1).withStartHour((byte) 0).withStopHour((byte) 24).withDeliveryDays(Byte.valueOf("127"))
+                .withType(1).withContentTypes("0").withMessage(message).make();
+
+        DistributionFarm.prepareDistribution(Constants.TEST_PERMANENT_DISTRIB_IN_PROCESS+1)
+                .withOutboundChannel(outboundChannel).withPriority(Priority.MEDIUM)
+                .withLimitSpeed(true).withMessagesReady(false).withSpeedPeroid(SpeedPeriodEnum.MIN)
+                .withDeliveryProbability(0).withSendSpeed(1000).withState(DistributionState.INPROCESS)
+                .withOwnerId(1).withStartHour((byte) 0).withStopHour((byte) 24).withDeliveryDays(Byte.valueOf("127"))
+                .withType(1).withContentTypes("0").withMessage(message).make();
+
+        DistributionFarm.prepareDistribution(Constants.TEST_PERMANENT_DISTRIB_IN_PROCESS+2)
+                .withOutboundChannel(outboundChannel).withPriority(Priority.MEDIUM)
+                .withLimitSpeed(true).withMessagesReady(false).withSpeedPeroid(SpeedPeriodEnum.MIN)
+                .withDeliveryProbability(0).withSendSpeed(1000).withState(DistributionState.INPROCESS)
+                .withOwnerId(1).withStartHour((byte) 0).withStopHour((byte) 24).withDeliveryDays(Byte.valueOf("127"))
+                .withType(1).withContentTypes("0").withMessage(message).make();
+
+        DistributionFarm.prepareDistribution(Constants.TEST_PERMANENT_DISTRIB_IN_PAUSE)
+                .withOutboundChannel(outboundChannel).withPriority(Priority.MEDIUM)
+                .withLimitSpeed(true).withMessagesReady(false).withSpeedPeroid(SpeedPeriodEnum.MIN)
+                .withDeliveryProbability(0).withSendSpeed(1000).withState(DistributionState.PAUSED)
+                .withOwnerId(1).withStartHour((byte) 0).withStopHour((byte) 24).withDeliveryDays(Byte.valueOf("127"))
+                .withType(1).withContentTypes("0").withMessage(message).make();
+
+    }
+
+
 }

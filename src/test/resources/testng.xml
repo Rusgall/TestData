@@ -9,15 +9,17 @@
         <parameter name="pass" value="${pass}"/>
 
         <classes>
-            <class name="ru.idigital.fastgate.qa.tests.Connection"/>
-            <class name="ru.idigital.fastgate.qa.tests.OutboundChannel"/>
-            <class name="ru.idigital.fastgate.qa.tests.SenderName"/>
-            <class name="ru.idigital.fastgate.qa.tests.Role"/>
-            <class name="ru.idigital.fastgate.qa.tests.Templates"/>
-            <class name="ru.idigital.fastgate.qa.tests.ReplacementRules"/>
-            <class name="ru.idigital.fastgate.qa.tests.Blocks"/>
-            <class name="ru.idigital.fastgate.qa.tests.Messages"/>
+            <!--<class name="ru.idigital.fastgate.qa.tests.Connection"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.OutboundChannel"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.InboundChannel"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.SenderName"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.Role"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.Templates"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.ReplacementRules"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.Blocks"/>-->
+            <!--<class name="ru.idigital.fastgate.qa.tests.Messages"/>-->
             <class name="ru.idigital.fastgate.qa.tests.Distributions"/>
+            <!--<class name="ru.idigital.fastgate.qa.tests.OutboundRule"/>-->
         </classes>
     </test>
 
