@@ -8,13 +8,13 @@ import ru.befree.ibs.distribution.SpeedPeriodEnum;
 import ru.befree.ibs.msgproc.Template;
 import ru.befree.qa.ibs.tools.util.datagen.DistributionFarm;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 
 import java.text.ParseException;
 
 public class Distributions extends BaseTestData {
 
-//    @Test(description = "Рассылки")
+    @Test(description = "Рассылки")
     public void insertDistributions() throws ParseException {
         Template template = getTemplateByName(Constants.TEST_DISTRIB_TEMPLATE);
         OutboundChannel outboundChannel = template.getOutboundChannel();

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import ru.befree.ibs.core.Priority;
 import ru.befree.ibs.msglog.report.MsgStateReport;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 
 import java.util.Date;
 import java.util.UUID;

@@ -4,7 +4,7 @@ import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 import ru.befree.qa.ibs.tools.util.datagen.ReplacementRulesFarm;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 
 import java.util.Collections;
 

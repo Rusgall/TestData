@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import ru.befree.ibs.core.ContentType;
 import ru.befree.qa.ibs.tools.util.datagen.OutboundRulesFarm;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 
 import java.util.Arrays;
 

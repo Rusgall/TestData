@@ -3,7 +3,7 @@ package ru.idigital.fastgate.qa.tests;
 import org.testng.annotations.Test;
 import ru.befree.qa.ibs.tools.util.datagen.OutboundChannelFarm;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 
 public class OutboundChannel extends BaseTestData {
 

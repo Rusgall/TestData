@@ -2,7 +2,7 @@ package ru.idigital.fastgate.qa.tests;
 
 import org.testng.annotations.Test;
 import ru.idigital.fastgate.qa.BaseTestData;
-import ru.idigital.fastgate.qa.data.constants.Constants;
+import ru.befree.qa.ibs.tools.util.constants.Constants;
 import ru.idigital.fastgate.qa.data.utils.RoleGrants;
 
 import java.sql.Connection;
@@ -24,7 +24,6 @@ public class Role extends BaseTestData {
             statement.setInt(5, 1);
             statement.setInt(6, 0);
             statement.executeUpdate();
-
         }
 
         try(Connection connection = DriverManager.getConnection(host, user, pass)) {
